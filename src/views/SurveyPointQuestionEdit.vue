@@ -22,6 +22,7 @@ import UserInfo from '../components/UserInfo.vue'
 import axios from 'axios'
 
 export default {
+    name: 'SurveyPointQuestionEdit',
     components: { 
         UserInfo,
         BottomController,

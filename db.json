@@ -1,0 +1,27 @@
+{
+    "resource": {
+      "name": "Terrazza esterna",
+      "questions": [
+        {
+          "id": 12,
+          "type": "PROVINCE",
+          "text": "In quale provincia risiedi?"
+        },
+        {
+          "id": 13,
+          "type": "5_STARS",
+          "text": "Come valuti la qualità del cibo?"
+        },
+        {
+          "id": 143,
+          "type": "5_STARS",
+          "text": "Come hai trovato il personale?"
+        },
+        {
+          "id": 144,
+          "type": "3_EMOJIS",
+          "text": "Come valuti l'esperienza nel suo insieme?"
+        }
+      ]
+    }
+}

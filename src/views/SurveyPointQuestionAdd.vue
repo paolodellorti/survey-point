@@ -15,6 +15,7 @@ import InputForm from '../components/InputForm.vue'
 import UserInfo from '../components/UserInfo.vue'
 
 export default {
+    name: 'SurveyPointQuestionAdd',
     components: { 
         UserInfo,
         BottomController,
