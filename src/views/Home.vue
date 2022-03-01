@@ -31,7 +31,7 @@
       :circle="true"
       :disabled="false"
       :noanimate="false"
-      :width="400"
+      :width="300"
       :height="60"
       text="swipe"
       success-text="loading..."
