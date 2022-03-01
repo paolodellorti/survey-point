@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="main">
     <user-info />
 
-    <div class="main" v-loading="isLoading">
+    <div v-loading="isLoading">
 
       <h1>{{ surveyPointData.name }}</h1>
 
@@ -71,3 +71,9 @@ export default {
   
 }
 </script>
+
+<style scoped>
+  .main {
+    margin-bottom: 150px;
+  }
+</style>

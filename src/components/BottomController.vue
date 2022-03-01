@@ -10,7 +10,7 @@
             @confirm="$emit('deleteQuestion')"
             >
             <el-button
-                class="bigButton" 
+                class="big-button" 
                 title="delete question"
                 type="danger" 
                 icon="el-icon-delete"
@@ -18,9 +18,9 @@
                 circle
             ></el-button>
         </el-popconfirm>
-        <div v-else></div>
+        <div class="big-button" v-else></div>
         <el-button 
-            class="smallButton"
+            class="small-button"
             title="go back" 
             type="danger" 
             icon="el-icon-back" 
@@ -29,7 +29,7 @@
             circle
         ></el-button>
         <el-button
-            class="bigButton" 
+            class="big-button" 
             title="add question" 
             type="success" 
             :icon="mainIcon" 
@@ -91,11 +91,11 @@ export default {
         width: 400px;
         margin: 0 auto;
     }
-    .bigButton {
+    .big-button {
         width: 70px;
         height: 70px;
     }
-    .smallButton {
+    .small-button {
         width: 50px;
         height: 50px;
     }
