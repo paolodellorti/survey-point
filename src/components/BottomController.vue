@@ -1,8 +1,8 @@
 <template>
   <div class="controller">
       <div></div>
-      <el-button type="danger" icon="el-icon-back" size="small" circle @click="back()"></el-button>
-      <el-button type="success" :icon="icon" circle ></el-button>
+      <el-button title="go back" type="danger" icon="el-icon-back" size="small" circle @click="back()"></el-button>
+      <el-button title="add question" type="success" :icon="icon" circle ></el-button>
   </div>
 </template>
 

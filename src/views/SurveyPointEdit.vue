@@ -41,7 +41,7 @@ export default {
     //   .then(res => this.surveyPointData = { ...res.data.resource })
     // questo è quello che farei se funzionasse l'endpoint, in questo caso:
     axios
-      .get('https://api.npoint.io/ec8a749d27089d43d040')
+      .get('https://my-json-server.typicode.com/paolodellorti/survey-point/db')
       .then(res => {
         this.surveyPointData = { ...res.data.resource }
         this.isLoading = false
