@@ -34,7 +34,7 @@
       :width="300"
       :height="60"
       text="swipe"
-      success-text="loading..."
+      success-text="⟳"
       @completed="swipeCompleted()"
     />
 
