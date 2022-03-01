@@ -33,8 +33,8 @@
       :noanimate="false"
       :width="400"
       :height="60"
-      text="start to manage"
-      success-text="loading"
+      text="swipe"
+      success-text="loading..."
       @completed="swipeCompleted()"
     />
 
