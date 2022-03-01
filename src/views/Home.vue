@@ -1,9 +1,11 @@
 <template>
   <div class="home">
+
     <img src="../assets/logo.png" alt="">
+
     <div class='title'>
       <h2>Bentornato,</h2>
-      <h1>{{ userName }}</h1>
+      <h1>Paolo Dell'Orti</h1>
       
       <el-descriptions>
         <el-descriptions-item label="ID">
@@ -19,8 +21,10 @@
           <el-tag size="small">Terrazza Esterna</el-tag>
         </el-descriptions-item>
       </el-descriptions>
+
       <h5>Fai swipe per accedere al gestore del punto sondaggi</h5>
     </div>
+
     <slide-unlock
       ref="vueslideunlock"
       :auto-width="false"
@@ -33,6 +37,7 @@
       success-text="loading"
       @completed="swipeCompleted()"
     />
+
   </div>
 </template>
 
@@ -41,11 +46,6 @@ import SlideUnlock from "vue2-slide-unlock"
 
 export default {
   name: 'Home',
-  data() {
-    return {
-      userName: ''
-    }
-  },
   components: {
     SlideUnlock
   },
@@ -53,10 +53,7 @@ export default {
     swipeCompleted: function() {
       setTimeout(() => this.$router.push({ name: 'SurveyPointEdit', params: { idWA: 12, idSP: 24 } }), 1000)
     }
-  },
-  mounted() {
-    this.userName = "Paolo Dell'Orti" 
-  }//in una applicazione reale, qua fetcho i dati utente tramite axios e li assegno alla variabile userName
+  }
 }
 </script>
 

@@ -1,11 +1,15 @@
 <template>
   <div>
     <user-info />
+
     <div class="main" v-loading="isLoading">
+
       <h1>{{ surveyPointData.name }}</h1>
+
       <p v-if="!Object.keys(this.surveyPointData).length">
         Qui non ci sono ancora domande, puoi usare il tasto + per aggiungerne.
       </p>
+
       <question-button 
         v-for="question in surveyPointData.questions" 
         :key="question.id" 
@@ -13,6 +17,7 @@
         @clickQuestion="onClickQuestion(question.id)" 
       />
     </div>
+
     <bottom-controller button-type="add" @confirm="handleClick" />
   </div>
 </template>
@@ -66,10 +71,3 @@ export default {
   
 }
 </script>
-
-<style scoped>
-i {
-  position: absolute;
-  top: 45%;
-}
-</style>

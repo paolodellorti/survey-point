@@ -80,10 +80,3 @@ export default {
 
 }
 </script>
-
-<style scoped>
-    i {
-    position: absolute;
-    top: 45%;
-    }
-</style>
