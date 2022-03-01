@@ -1,5 +1,8 @@
 # survey-point
 
+Check it at [survey-point-manager.netlify.app](https://survey-point-manager.netlify.app/).
+
+
 ## Project setup
 ```
 npm install
