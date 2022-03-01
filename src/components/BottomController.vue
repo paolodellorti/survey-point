@@ -10,6 +10,7 @@
             @confirm="$emit('deleteQuestion')"
             >
             <el-button
+                class="bigButton" 
                 title="delete question"
                 type="danger" 
                 icon="el-icon-delete"
@@ -19,6 +20,7 @@
         </el-popconfirm>
         <div v-else></div>
         <el-button 
+            class="smallButton"
             title="go back" 
             type="danger" 
             icon="el-icon-back" 
@@ -26,7 +28,8 @@
             @click="$router.push({ name: backPage })"
             circle
         ></el-button>
-        <el-button 
+        <el-button
+            class="bigButton" 
             title="add question" 
             type="success" 
             :icon="mainIcon" 
@@ -55,10 +58,6 @@ export default {
             mainIcon: '',
             backPage: '',
             params: {}
-        }
-    },
-    methods: {
-        handleBack() {
         }
     },
     mounted() {
@@ -92,4 +91,19 @@ export default {
         width: 400px;
         margin: 0 auto;
     }
+    .bigButton {
+        width: 70px;
+        height: 70px;
+    }
+    .smallButton {
+        width: 50px;
+        height: 50px;
+    }
+    @media only screen and (max-width: 600px)   {
+        .controller {
+            justify-content: space-evenly;
+            bottom: 70px;
+        }
+    }
+
 </style>
