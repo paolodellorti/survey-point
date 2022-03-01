@@ -1,6 +1,6 @@
 <template>
   <div class="mainTitle">
-    <div class="title">
+    <div class="title" @click="$router.push({ name: 'Home' })">
       <h3>Paolo Dell'Orti</h3>
       <h6># 457384V</h6>
     </div>
@@ -21,6 +21,9 @@ export default {
     align-items: center;
     border-bottom: 3px solid #000;
     padding: 10px 0;
+  }
+  .title {
+    cursor: pointer;
   }
   .title>h3 {
     margin-bottom: 0;
