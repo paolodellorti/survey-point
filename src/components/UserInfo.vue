@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div class="mainTitle">
     <div class="title">
       <h3>Paolo Dell'Orti</h3>
       <h6># 457384V</h6>
@@ -15,7 +15,7 @@ export default {
 </script>
 
 <style scoped>
-  .main {
+  .mainTitle {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,9 +29,6 @@ export default {
   .title>h6 {
     margin-top: 0;
     text-align: left;
-    color: rgb(160, 160, 160);
-  }
-  h3 {
-
+    color: #C0C4CC;
   }
 </style>
