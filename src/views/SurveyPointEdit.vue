@@ -1,17 +1,19 @@
 <template>
   <div>
     <user-info />
-    <div class="about">
-      <i v-if="isLoading" class="el-icon-loading"></i>
-      <div v-else>
-        <h1>{{ surveyPointData.name }}</h1>
-        <p v-if="!Object.keys(this.surveyPointData).length">
-          Qui non ci sono ancora domande, puoi usare il tasto + per aggiungerne.
-        </p>
-        <question-button v-for="question in surveyPointData.questions" :key="question.id" :question="question.type" />
-      </div>
+    <div class="main" v-loading="isLoading">
+      <h1>{{ surveyPointData.name }}</h1>
+      <p v-if="!Object.keys(this.surveyPointData).length">
+        Qui non ci sono ancora domande, puoi usare il tasto + per aggiungerne.
+      </p>
+      <question-button 
+        v-for="question in surveyPointData.questions" 
+        :key="question.id" 
+        :question="question" 
+        @clickQuestion="onClickQuestion(question.id)" 
+      />
     </div>
-    <bottom-controller button-type="add" />
+    <bottom-controller button-type="add" @confirm="handleClick" />
   </div>
 </template>
 
@@ -34,8 +36,22 @@ export default {
       isLoading: true
     }
   },
+  methods: {
+    onClickQuestion(id) {
+      this.$router.push({ 
+        name: 'SurveyPointQuestionEdit', 
+        params: {
+          idWA: this.$route.params.idWA, 
+          idSP: this.$route.params.idSP, 
+          idQU: id
+        } 
+      })
+    },
+    handleClick() {
+      this.$router.push({ name: 'SurveyPointQuestionAdd' })
+    }
+  },
   mounted() {
-    console.log(Object.keys(this.surveyPointData).length);
     // axios
     //   .get(`https://devapi.claster.it/api/v2/work-areas/${this.$route.params.idWA}/survey-points/${this.$route.params.idSP}`)
     //   .then(res => this.surveyPointData = { ...res.data.resource })
