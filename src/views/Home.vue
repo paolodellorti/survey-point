@@ -22,7 +22,7 @@
         </el-descriptions-item>
       </el-descriptions>
 
-      <h5>Fai swipe per accedere al gestore del punto sondaggi</h5>
+      <h5>Swipe per accedere al gestore del punto sondaggi</h5>
     </div>
 
     <slide-unlock

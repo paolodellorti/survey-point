@@ -12,7 +12,6 @@
   text-align: center;
   color: #2c3e50;
 }
-
 body {
   margin: 0;
   padding: 0;
@@ -22,7 +21,9 @@ body {
   min-height: 100vh;
   margin: 0 auto;
 }
-.main {
-  margin-bottom: 60px;
+@media only screen and (max-width: 600px) {
+  .router {
+    padding: 5px 10px;
+  }
 }
 </style>

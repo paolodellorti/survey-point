@@ -21,6 +21,7 @@ export default {
     align-items: center;
     border-bottom: 3px solid #000;
     padding: 10px 0;
+    background-color: rgb(233, 233, 233);
   }
   .title {
     cursor: pointer;
